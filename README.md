@@ -1,6 +1,5 @@
-# Bharat KYC - Digital Identity Verification Portal
+#  KYC App - Digital Identity Verification Portal
 
-** #Netlify link-** https://nehalnishakyc.netlify.app/
 
 ## Overview
 A government-grade KYC (Know Your Customer) verification system with both mobile and web applications. Features real-time document capture, face verification, and comprehensive validation with professional government styling.
