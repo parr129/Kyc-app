@@ -65,6 +65,7 @@ Processing Simulation	TensorFlow.js references (mocked ML/AI behavior)
 Styling	Indian government color palette (Saffron, White, Green)
 Languages Supported	English (default), Hindi, Telugu, Tamil, Bengali, Gujarati
 Project Directory Layout
+
 KYC/
 ├── web-app/
 │   ├── index.html           # Complete standalone browser app
@@ -77,6 +78,7 @@ KYC/
 │   ├── package.json         # Dependencies list
 │   └── metro.config.js      # Metro bundler configuration
 └── README.md
+
 
 Setup Instructions
 For Web
