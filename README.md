@@ -1,23 +1,30 @@
-Digital KYC Verification System
-Introduction
+🏛️ KYC App – Digital Identity Verification Portal
+📘 Overview
 
-This project presents a government-grade digital KYC (Know Your Customer) verification platform, designed for both web and mobile environments. It enables real-time identity authentication through document scanning, face matching, and liveness checks, wrapped in a professional government-style interface.
+The KYC App is a government-grade digital identity verification system designed to streamline the Know Your Customer (KYC) process through secure and efficient document and face authentication.
+It features both web and mobile applications, supporting real-time document scanning, face verification, and simulated AI-based validation, presented in a professional Indian government-style interface.
 
-Core Highlights
+🚀 Key Features
 
-Real-Time Capture: Instant camera-based document and face image collection
+Multi-Platform Support – Fully functional web and mobile applications
 
-Multi-Language Support: Dynamic interface supporting six major Indian languages
+Real-Time Capture – Live document and selfie image acquisition via camera
 
-Fake Detection: Simulated AI-based document authenticity verification
+Face Verification – Liveness and match detection (simulated)
 
-Cross-Platform Design: Fully responsive web app and React Native mobile app
+Document Validation – Fake document detection simulation (20% random rate)
 
-Offline Compatibility: Mobile app can function without constant internet access
+Multi-Language Interface – English, Hindi, Telugu, Tamil, Bengali, Gujarati
 
-PDF Generation: Users can download or share verification reports instantly
+PDF Report Generation – Download or share verification summaries
 
-Supported Identity Documents
+Offline Functionality – Mobile version supports offline KYC flow
+
+Government-Style UI – Clean, emoji-free interface with tricolor palette
+
+Error Handling – Detailed feedback for incomplete or invalid data
+
+🧩 Supported Documents
 
 Aadhaar Card
 
@@ -27,116 +34,95 @@ Driving License
 
 Voter ID
 
-Application Architecture
-1. Web Platform (web-app/index.html)
+🖥️ Web Application (web-app/)
+Features
 
-Developed as a pure HTML5 standalone app — no frameworks used
+Pure HTML5/CSS3/JavaScript (no frameworks)
 
-Incorporates live video capture for ID and selfie verification
+Live Camera Integration via MediaDevices.getUserMedia()
 
-Simulates OCR and facial recognition processing using JavaScript
+OCR & Face Processing Simulation using TensorFlow.js references
 
-Implements fake document detection (20% random simulation rate)
+Multi-Language Translation and dynamic UI updates
 
-Includes multi-language translation (English, Hindi, Telugu, Tamil, Bengali, Gujarati)
+Mobile-Responsive Layout compatible across all devices
 
-Features a responsive government-style interface with tricolor theme
+PDF Report Generation for verification results
 
-Allows PDF report export and sharing
+Running the Web App
 
-2. Mobile Platform (mobile-app/)
+Open web-app/index.html in any modern browser
 
-Built with React Native (v0.72.6) using Expo SDK 49
+Click “Start KYC Verification”
 
-Utilizes expo-camera for real photo capture
+Select a document type and capture images
 
-Contains document and face recognition modules
+Complete verification and download the report
 
-Features a simple, formal UI suitable for government deployment
+📱 Mobile Application (mobile-app/)
+Features
 
-Works offline through local data handling
+Built with React Native (v0.72.6) and Expo SDK 49
 
-Technical Stack
-Layer	Technology Used
-Web	HTML5, CSS3, Vanilla JavaScript
-Mobile	React Native + Expo
-Camera APIs	MediaDevices (Web), expo-camera (Mobile)
-Processing Simulation	TensorFlow.js references (mocked ML/AI behavior)
-Styling	Indian government color palette (Saffron, White, Green)
-Languages Supported	English (default), Hindi, Telugu, Tamil, Bengali, Gujarati
-Project Directory Layout
+Uses expo-camera for real photo and video capture
 
+Contains DocumentProcessor and CameraScreen components
+
+Fully offline-capable with local data handling
+
+Consistent government-style UI
+
+Running the Mobile App
+
+Navigate to the mobile-app/ directory
+
+Install dependencies:
+
+npm install
+
+
+Start the Expo development server:
+
+npx expo start
+
+
+Scan the QR code with the Expo Go app or run on an emulator
+
+⚙️ Technical Stack
+Component	Technology
+Web	HTML5, CSS3, JavaScript
+Mobile	React Native (Expo SDK 49)
+Camera Access	MediaDevices API (Web), expo-camera (Mobile)
+Processing	Simulated AI/ML via TensorFlow.js references
+Styling	Government color scheme – Saffron, White, Green
+Languages Supported	English, Hindi, Telugu, Tamil, Bengali, Gujarati
+📁 Project Structure
 KYC/
 ├── web-app/
-│   ├── index.html           # Complete standalone browser app
-│   └── webpack.config.js    # Web build configuration
+│   ├── index.html           # Complete standalone web application
+│   └── webpack.config.js    # Build configuration
 ├── mobile-app/
 │   ├── App.js               # Main React Native entry point
 │   ├── components/
 │   │   ├── CameraScreen.js       # Camera functionality
-│   │   └── DocumentProcessor.js  # Validation and analysis logic
-│   ├── package.json         # Dependencies list
+│   │   └── DocumentProcessor.js  # Document validation logic
+│   ├── package.json         # Dependencies
 │   └── metro.config.js      # Metro bundler configuration
 └── README.md
 
+🔄 Demo Workflow
 
-Setup Instructions
-For Web
+Welcome Screen → Start KYC (optional OTP bypass)
 
-Open web-app/index.html in any modern browser.
+Select Document Type → Choose Aadhaar, PAN, License, or Voter ID
 
-Click “Start KYC Verification” to initiate the workflow.
+Capture Stage → Take photo of document and face
 
-Select a document type and capture the required images.
+Verification Stage → AI-based analysis (simulated)
 
-Follow the on-screen steps to complete verification.
+Result Stage → Display validation status and allow PDF download/share
 
-For Mobile
-
-Navigate to the mobile-app/ folder.
-
-Run npm install to install all dependencies.
-
-Launch with npx expo start.
-
-Use Expo Go on your device or emulator to test the app.
-
-Functional Overview
-Key Features
-
-Integrated camera access on both platforms
-
-Live document and selfie capture
-
-Simulated fraud detection and validation process
-
-Full translation system with six-language support
-
-Professional, emoji-free government design
-
-Device-responsive and mobile-first layout
-
-Detailed error handling and user guidance
-
-On-demand PDF generation
-
-Optional demo mode (phone verification bypass)
-
-Offline-ready architecture for mobile
-
-User Flow (Demo Simulation)
-
-Welcome Screen → Launches KYC process (optionally skips OTP).
-
-Document Type Selection → Choose Aadhaar, PAN, License, or Voter ID.
-
-Capture Phase → Take photos of the document and face.
-
-Verification Phase → System analyzes and validates inputs (simulated).
-
-Results Screen → Displays success or failure with PDF download/share options.
-
-Language Availability
+🌐 Language Options
 
 English (default)
 
@@ -149,3 +135,13 @@ English (default)
 বাংলা (Bengali)
 
 ગુજરાતી (Gujarati)
+
+🧠 Future Enhancements
+
+Integration with actual OCR/Face Recognition APIs
+
+Secure backend with encrypted document storage
+
+Biometric verification via government APIs
+
+Cloud-based analytics for fraud detection
